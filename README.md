@@ -1,3 +1,4 @@
 # firefox_aluminum
+For Firefox 68
 theme applied via UserChrome
-change1.0
+inspired by the original Aluminium theme by Gerrit Vanoppen
