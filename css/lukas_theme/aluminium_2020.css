@@ -1,0 +1,1347 @@
+/* Firefox Quantum userChrome.css tweaks ************************************************/
+/* Github: https://github.com/aris-t2/customcssforfx ************************************/
+/****************************************************************************************/
+
+
+/***************** main window ****************/
+/* min/max/resize/close buttons*/
+#main-window .titlebar-button {
+	color: #5d5d5d !important;
+	padding: 0 14px !important;
+	
+}
+
+#main-window .titlebar-button:hover:not(.titlebar-close) {
+	color: black !important;
+	background-color: #d6d6d6 !important;	
+}
+
+/*top border of FF window*/
+#main-window {
+  border-top: 2px ridge #fbfbfb !important;
+}
+
+#main-window[tabsintitlebar] #TabsToolbar {
+  margin-top: -1px !important;
+}
+
+#main-window[sizemode="maximized"][tabsintitlebar] #TabsToolbar {
+  margin-top: -1px !important;
+}
+
+#main-window #navigator-toolbox #titlebar #TabsToolbar > .toolbar-items {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+}
+
+@media (-moz-os-version: windows-win10) {
+  #main-window[sizemode="maximized"] .titlebar-buttonbox-container {
+	-moz-margin-end: -2px !important;
+  }
+}
+
+/*************** menu bar****************/
+#toolbar-menubar {
+	background-color: #efefef !important;
+	color: #494949 !important;	
+}
+
+
+/*************** navigation bar****************/
+#nav-bar, #PersonalToolbar {
+	background-color: #f7f7f7 !important;	
+}  
+
+#nav-bar {
+    box-shadow: 0px -1px 1px 0px rgba(0,0,0,.2) !important;	
+} 
+
+/********nav bar buttons*******/ 
+/* main menu button adjustment */
+#PanelUI-button {
+  margin-inline-start: 0px !important;
+  border-inline-start: 0px solid !important;
+  border-image-slice: 0 !important;
+  padding-left: 2px !important;
+  padding-right: 2px !important;
+}
+#PanelUI-menu-button {
+  -moz-appearance: unset !important;
+  background: unset !important;
+  box-shadow: unset !important;
+  border-image: unset !important;
+  border: unset !important;
+  padding: unset !important;
+  margin: unset !important;
+  min-width: unset !important;
+  width: unset !important;
+  max-width: unset !important;
+  min-height: unset !important;
+  height: unset !important;
+  max-height: unset !important;
+}
+
+
+
+#nav-bar .toolbarbutton-1 {
+	--toolbarbutton-hover-background: #f7f7f7 !important;
+	--toolbarbutton-active-background: #f7f7f7 !important;
+  
+} 
+
+
+/************* url bar / address bar and search bar ****************/
+
+#urlbar:not([focused=true]), 
+#searchbar > .searchbar-textbox:not([focused=true]) {
+	min-height: 28px !important;
+	border-top: 1px solid white !important;
+	border-bottom: 1px solid white !important;
+	border-left: transparent !important;
+	border-right: transparent !important;
+	border-radius: 0px !important;
+	box-shadow: 0px 1px 2px 1px rgba(0,0,0,.4) inset !important;
+	font-size: 12px !important;
+}
+
+#urlbar[focused=true], 
+#searchbar > .searchbar-textbox[focused=true] {
+	min-height: 28px !important;
+	border-top: 1px solid white !important;
+	border-bottom: 1px solid white !important;
+	border-left: transparent !important;
+	border-right: transparent !important;
+	border-radius: 0px !important;
+	box-shadow: 0px 1px 2px 1px rgba(0,0,0,.5) inset !important;
+	font-size: 12px !important;
+}
+/****url bar icons****/
+#urlbar #star-button {
+    list-style-image: url("./../../image/star_button1.png") !important;
+}
+#urlbar #star-button[starred] {
+    list-style-image: url("./../../image/star_button2.png") !important;
+}
+#urlbar #identity-icon {
+    list-style-image: url("./../../image/globe.png") !important;
+}
+#urlbar #identity-icon:hover {
+    list-style-image: url("./../../image/globe2.png") !important;
+}
+
+
+/******* personal bookmarks toolbar ********/
+#PersonalToolbar {
+	border-top: 3px ridge #fefefe !important;
+	padding: 1px 0 1px 0 !important;
+	
+}
+
+#PersonalToolbar #personal-bookmarks {
+	padding: 0px 0 !important;
+}
+
+#PersonalToolbar #personal-bookmarks toolbarbutton:not([open="true"]):not([checked="true"]):not([disabled="true"]):not(:active):not(:hover) {
+	-moz-appearance: none !important;
+	background-color: #f7f7f7 !important;
+	color: #565555 !important;
+	font-weight: bold !important;
+	font-size: 11px !important;
+	text-shadow: 1px 1px white !important;
+	padding: 1px 4px !important;
+}
+
+#PersonalToolbar #personal-bookmarks toolbarbutton:not([open="true"]):not([checked="true"]):not([disabled="true"]):not(:active):hover {
+	-moz-appearance: none !important;
+	background-color: #eaeaea !important;
+	box-shadow: inset 0px 2px 2px 0px rgba(77,76,77,0.4) !important;
+	border-radius: 0px !important;
+	border-top: 1px solid white !important;
+	border-bottom: 1px solid white !important;
+	color: white !important;
+	text-shadow: 1px 1px rgba(0,0,0,.7) !important;
+	font-weight: bold !important;
+	font-size: 11px !important;
+	padding: 0px 4px !important;
+}
+#PersonalToolbar #personal-bookmarks toolbarbutton:hover:active:not([disabled="true"]),
+#PersonalToolbar toolbarbutton[checked="true"]:not([disabled="true"]),
+#PersonalToolbar toolbarbutton[open="true"]:not([disabled="true"]) {
+	-moz-appearance: none !important;
+	background-color: #e1e0e0 !important;
+	box-shadow: inset 0px 2px 2px 0px rgba(77,76,77,0.4) !important;
+	border-radius: 0px !important;
+	border-top: 1px solid white !important;
+	border-bottom: 1px solid white !important;
+	color: white !important;
+	text-shadow: 1px 1px rgba(0,0,0,.7) !important;
+	font-weight: bold !important;
+	font-size: 11px !important;
+	padding: 0px 4px !important;
+}
+
+#PersonalToolbar .toolbarbutton-1 .toolbarbutton-icon {
+	width: 16px !important;
+	height: 16px !important;
+}
+	
+#PersonalToolbar .toolbarbutton-1 {
+	-moz-appearance: none !important;
+	background-color: transparent !important;
+	border-top: 1px solid transparent !important;
+	border-bottom: 1px solid transparent !important;
+	padding: 0px 4px !important;
+	
+}
+
+
+
+#PersonalToolbar .toolbarbutton-1:not([open="true"]):not([checked="true"]):not([disabled="true"]):not(:active):hover {
+	-moz-appearance: none !important;
+	background-color: #eaeaea !important;
+	box-shadow: inset 0px 2px 2px 0px rgba(77,76,77,0.4) !important;
+	border-radius: 0px !important;
+	border-top: 1px solid white !important;
+	border-bottom: 1px solid white !important;
+	padding: 0px 4px !important;
+	
+}
+#PersonalToolbar .toolbarbutton-1:hover:active:not([disabled="true"]),
+#PersonalToolbar .toolbarbutton-1[checked="true"]:not([disabled="true"]),
+#PersonalToolbar .toolbarbutton-1[open="true"]:not([disabled="true"]) {
+	-moz-appearance: none !important;
+	background-color: #e1e0e0 !important;
+	box-shadow: inset 0px 2px 2px 0px rgba(77,76,77,0.4) !important;
+	border-radius: 0px !important;
+	border-top: 1px solid white !important;
+	border-bottom: 1px solid white !important;
+	
+}
+
+#PlacesToolbarItems > .bookmark-item > .toolbarbutton-icon {
+	list-style-image: url("../../image/livemark-folder.png") !important;
+	padding-left: 0px !important;
+	padding-right: 0px !important;
+	width: 16px !important;
+	height: 16px !important;
+}
+
+
+
+/************ menus *************/
+
+menuitem:not(.openintabs-menuitem):not(.bookmark-item):not(.menuitem-iconic):not([open="true"]):not([checked="true"]):not([disabled="true"]):not(:active):not(:hover) {
+	-moz-appearance: none !important;
+	color: #191919 !important;
+	background-color: #f7f7f7 !important;
+	padding: 4px 0px !important;
+	
+	font-size: 11px !important;
+	text-shadow: 1px 1px white !important;
+}	
+menuitem:not(.openintabs-menuitem):not(.bookmark-item):not(.menuitem-iconic):not([open="true"]):not([checked="true"]):not([disabled="true"]):hover {
+	-moz-appearance: none !important;
+	color: #191919 !important;
+	background-color: #eaeaea !important;
+	box-shadow: inset 0px 2px 2px 0px rgba(77,76,77,0.5) !important;
+	padding: 4px 0px !important;
+	
+	font-size: 11px !important;
+	text-shadow: 1px 1px white !important;
+}
+
+#main-menubar > menu {
+	height: 22px !important;
+	background-color: #efefef !important;
+}
+
+/*takes care of menu items like "sync/send page to device"*/
+menu[_moz-menuactive="true"]:link {
+	-moz-appearance: none !important;
+	height: 22px !important;
+	background-color: #f7f7f7 !important;
+}
+
+menu[_moz-menuactive="true"]:visited {
+	-moz-appearance: none !important;
+	height: 22px !important;
+	background-color: #f7f7f7 !important;
+}
+
+menu[_moz-menuactive="true"]:hover {
+  -moz-appearance: none !important;
+    background-color: rgb(230, 230, 230) !important;
+    height: 22px !important;
+    box-shadow: inset 0px 2px 2px 0px rgba(77,76,77,0.4) !important;
+    outline: 1px solid white;
+}
+
+menu[_moz-menuactive="true"]:active {
+  -moz-appearance: none !important;
+    background-color: rgb(230, 230, 230) !important;
+    height: 22px !important;
+    box-shadow: inset 0px 2px 2px 0px rgba(77,76,77,0.4) !important;
+}
+
+/******menu items with checkboxes ******/
+menuitem[type="checkbox"]:not(.openintabs-menuitem):not(.bookmark-item):not([open="true"]):not([disabled="true"]):not(:active):not(:hover) {
+	-moz-appearance: none !important;
+	color: #191919 !important;
+	background-color: #f7f7f7 !important;
+	padding: 2px 14px !important;
+	
+	font-size: 11px !important;
+	text-shadow: 1px 1px white !important;
+}	
+menuitem[type="checkbox"]:not(.openintabs-menuitem):not(.bookmark-item):not([open="true"]):not([disabled="true"]):hover {
+	-moz-appearance: none !important;
+	color: #191919 !important;
+	background-color: #eaeaea !important;
+	box-shadow: inset 0px 2px 2px 0px rgba(77,76,77,0.5) !important;
+	padding: 2px 14px !important;
+	
+	font-size: 11px !important;
+	text-shadow: 1px 1px white !important;
+}
+
+menuitem[type="checkbox"][checked="false"]:not(.openintabs-menuitem):not(.bookmark-item):not([open="true"]):not([disabled="true"]):not(:active):not(:hover) {
+	-moz-appearance: none !important;
+	color: #191919 !important;
+	background-color: #f7f7f7 !important;
+	padding: 2px 14px !important;
+	
+	font-size: 11px !important;
+	text-shadow: 1px 1px white !important;
+}	
+menuitem[type="checkbox"][checked="false"]:not(.openintabs-menuitem):not(.bookmark-item):not([open="true"]):not([disabled="true"]):hover {
+	-moz-appearance: none !important;
+	color: #191919 !important;
+	background-color: #eaeaea !important;
+	box-shadow: inset 0px 2px 2px 0px rgba(77,76,77,0.5) !important;
+	padding: 2px 14px !important;
+	
+	font-size: 11px !important;
+	text-shadow: 1px 1px white !important;
+}
+
+menuitem[type="checkbox"][checked="false"] > .menu-iconic-left {
+	-moz-appearance: none !important;
+	background-color: transparent !important;
+	background-image: none !important;
+	width: 16px !important;
+	height: 16px !important;
+	padding: 2px 2px !important;
+}
+
+menuitem[type="checkbox"][checked="true"] > .menu-iconic-left {
+	-moz-appearance: none !important;
+	background-color: transparent !important;
+	background-image: url("../../image/menu-check.png") !important;
+	width: 16px !important;
+	height: 16px !important;
+	padding: 2px 2px !important;
+}
+/******menu items with checkboxes END******/
+
+/*****menu items with icons on the left****/
+menuitem.menuitem-iconic {
+	-moz-appearance: none !important;
+	color: #191919 !important;
+	background-color: #f7f7f7 !important;
+	padding: 0px 0px !important;
+	
+	font-size: 11px !important;
+	text-shadow: 1px 1px white !important;
+}
+menuitem.menuitem-iconic:hover {
+	-moz-appearance: none !important;
+	background-color: #eaeaea !important;
+	box-shadow: inset 0px 2px 2px 0px rgba(77,76,77,0.5) !important;
+	padding: 0px 0px !important;
+	
+	font-size: 11px !important;
+	text-shadow: 1px 1px white !important;
+}
+/**/
+
+.popup-internal-box {
+	-moz-appearance: none !important;
+	background-color: #f7f7f7 !important;
+}
+
+.popup-internal-box .openintabs-menuitem {
+	-moz-appearance: none !important;
+	background-color: #f7f7f7 !important;
+}
+.openintabs-menuitem:not([open="true"]):not([checked="true"]):not([disabled="true"]):not(:active):hover {
+	-moz-appearance: none !important;
+	background-color: #eaeaea !important;
+	box-shadow: inset 0px 2px 2px 0px rgba(77,76,77,0.5) !important;
+	border-radius: 0px !important;
+	border-top: 1px solid white !important;
+	border-bottom: 1px solid white !important;
+	height: 22px !important;
+}
+menuitem.bookmark-item {
+	-moz-appearance: none !important;
+	background-color: #f7f7f7 !important;
+	border-top: 1px solid #f7f7f7 !important;
+	border-bottom: 1px solid #f7f7f7 !important;
+	height: 22px !important;
+	font-size: 11px !important;
+	text-shadow: 1px 1px white !important;
+}
+menuitem.bookmark-item:not([open="true"]):not([checked="true"]):not([disabled="true"]):not(:active):hover {
+	-moz-appearance: none !important;
+	background-color: #eaeaea !important;
+	box-shadow: inset 0px 2px 2px 0px rgba(77,76,77,0.5) !important;
+	border-radius: 0px !important;
+	border-top: 1px solid white !important;
+	border-bottom: 1px solid white !important;
+	height: 22px !important;
+	font-size: 11px !important;
+	text-shadow: 1px 1px white !important;
+}
+
+menuitem.bookmark-item:not([open="true"]):not([checked="true"]):not([disabled="true"]):active:hover {
+	-moz-appearance: none !important;
+	box-shadow: inset 0px 2px 2px 0px rgba(77,76,77,0.5) !important;
+	border-radius: 0px !important;
+	border-top: 1px solid white !important;
+	border-bottom: 1px solid white !important;
+	height: 22px !important;
+	font-size: 11px !important;
+	text-shadow: 1px 1px white !important;
+}
+
+
+
+
+
+/*****arrow on top of and below overflowing popoup menu and bookmarks menu*******/
+#PersonalToolbar toolbarbutton .scrollbutton-up .toolbarbutton-icon,
+#PersonalToolbar toolbarbutton .scrollbutton-down .toolbarbutton-icon {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+  width: 6px !important;
+  height: 6px !important;
+}
+/**/
+
+/** menu icon for folders in bookmarks menu*/
+#BMB_bookmarksPopup .bookmark-item .menu-iconic-left {
+	list-style-image: url("../../image/folder.png") !important;
+}
+/** menu icon for folders in bookmarks menu END*/
+
+/*
+#BMB_bookmarksPopup .bookmark-item,
+menupopup .menuitem-iconic {
+	background-color: #f7f7f7 !important;
+}
+#BMB_bookmarksPopup .bookmark-item:hover,
+menupopup .menuitem-iconic:hover {
+	background-color: #eaeaea !important;
+	box-shadow: inset 0px 2px 2px 0px rgba(77,76,77,0.5) !important;
+}*/
+
+/*bookmark buttons in bookmarks menu*/
+#BMB_bookmarksPopup .subviewbutton:not([disabled="true"]):not(.panel-subview-footer) {
+	-moz-appearance: none !important;
+    background-color: #f7f7f7 !important;
+	padding: 2px 18px 2px 18px !important;
+	border-top: 1px solid #f7f7f7 !important;
+	border-bottom: 1px solid #f7f7f7 !important;
+	min-height: 24px !important;
+	margin: 0 0 !important;
+	color: #191919 !important;
+	font-size: 8pt !important;
+	
+	text-shadow: 1px 1px white !important;
+}
+#BMB_bookmarksPopup .subviewbutton:not([disabled="true"]):not(.panel-subview-footer):hover {
+	-moz-appearance: none !important;
+    background-color: #eaeaea !important;
+	box-shadow: inset 0px 2px 2px 0px rgba(77,76,77,0.5) !important;
+	padding: 2px 18px 2px 18px !important;
+	border-top: 1px solid white !important;
+	border-bottom: 1px solid white !important;
+	min-height: 24px !important;
+	margin: 0 0 !important;
+	color: #191919 !important;
+	font-size: 8pt !important;
+	
+	text-shadow: 1px 1px white !important;
+}
+
+/*bottom button of bookmarks menu*/
+#BMB_bookmarksPopup .panel-subview-footer {
+	-moz-appearance: none !important;
+    background-color: rgba (255, 255, 255, 1) !important;
+	padding: 2px 28px 2px 18px !important;
+	border-top: 1px solid rgb (254, 254, 254) !important;
+	border-bottom: 1px solid rgb (254, 254, 254) !important;
+	min-height: 26px !important;
+	margin: 0 0 !important;
+	color: #191919 !important;
+	font-size: 8.5pt !important;
+	font-weight: bold !important;
+	text-shadow: 1px 1px white !important;
+}
+#BMB_bookmarksPopup .panel-subview-footer:hover {
+	-moz-appearance: none !important;
+    background-color: #eaeaea !important;
+	box-shadow: inset 0px 2px 2px 0px rgba(77,76,77,0.5) !important;
+	padding: 2px 28px 2px 18px !important;
+	border-top: 1px solid white !important;
+	border-bottom: 1px solid white !important;
+	min-height: 26px !important;
+	margin: 0 0 !important;
+	color: #191919 !important;
+	font-size: 8.5pt !important;
+	font-weight: bold !important;
+	text-shadow: 1px 1px white !important;
+}
+/*********textboxes in menus***********/
+
+menulist {
+	-moz-appearance: none !important;
+	background-color: #fdfdfd !important;
+	box-shadow: inset 0px 2px 2px 0px rgba(77,76,77,0.6) !important;
+	border-radius: 0px !important;
+	outline: 1px solid white !important;
+	padding: 4px 2px !important;
+}
+menulist:hover {
+	-moz-appearance: none !important;
+	background-color: #fdfdfd !important;
+	box-shadow: inset 0px 2px 2px 0px rgba(77,76,77,0.7) !important;
+	border-radius: 0px !important;
+	outline: 1px solid white !important;
+	padding: 4px 2px !important;
+}
+
+menulist:focus {
+	-moz-appearance: none !important;
+	background-color: #fdfdfd !important;
+	box-shadow: inset 0px 2px 2px 0px rgba(77,76,77,0.7) !important;
+	border-radius: 0px !important;
+	outline: 1px solid white !important;
+	padding: 4px 2px !important;
+}
+
+#editBookmarkPanelRows textbox[type="autocomplete"]:not([focused=true]) {
+	-moz-appearance: none !important;
+	background-color: #fdfdfd !important;
+	box-shadow: inset 0px 1px 1px 0px rgba(77,76,77,0.8) !important;
+	border-radius: 0px !important;
+	outline: 1px solid white !important;
+	padding: 4px 2px !important;
+}
+#editBookmarkPanelRows textbox[type="autocomplete"][focused=true] {
+	-moz-appearance: none !important;
+	background-color: #fdfdfd !important;
+	box-shadow: inset 0px 1px 2px 0px rgba(77,76,77,0.9) !important;
+	border-radius: 0px !important;
+	outline: 1px solid white !important;
+	padding: 4px 2px !important;
+}
+
+#editBMPanel_nameRow textbox:not([focused=true]) {
+	-moz-appearance: none !important;
+	background-color: #fdfdfd !important;
+	box-shadow: inset 0px 1px 1px 0px rgba(77,76,77,0.8) !important;
+	border-radius: 0px !important;
+	outline: 1px solid white !important;
+	padding: 4px 2px !important;
+}
+#editBMPanel_nameRow textbox[focused=true] {
+	-moz-appearance: none !important;
+	background-color: #fdfdfd !important;
+	box-shadow: inset 0px 1px 2px 0px rgba(77,76,77,0.9) !important;
+	border-radius: 0px !important;
+	outline: 1px solid white !important;
+	padding: 4px 2px !important;
+}
+
+#editBookmarkPanelRows .expander-up, .expander-down {
+	-moz-appearance: none !important;
+    border-radius: 0px !important;
+	border-top: 1px solid white !important;
+	border-bottom: 1px solid white !important;
+	border-left: none !important;
+	border-right: none !important;
+	box-shadow: inset 0px 2px 2px 0px rgba(77,76,77,0.6) !important;
+	background-color: #f7f7f7 !important;
+	padding: 3px !important;
+}
+#editBookmarkPanelRows .expander-up:hover:not([disabled="true"]), 
+.expander-down:hover:not([disabled="true"]) {
+	-moz-appearance: none !important;
+    border-radius: 0px !important;
+	border-top: 1px solid white !important;
+	border-bottom: 1px solid white !important;
+	border-left: none !important;
+	border-right: none !important;
+	box-shadow: inset 0px 2px 2px 0px rgba(77,76,77,0.6) !important;
+	background-color: #eaeaea !important;
+	padding: 3px !important;
+}
+
+#editBookmarkPanelRows > button {
+	-moz-appearance: none !important;
+    background-color: #f7f7f7 !important;
+	box-shadow: inset 0px 2px 2px 0px rgba(77,76,77,0.5) !important;
+	border-radius: 0px !important;
+	border-top: 1px solid white !important;
+	border-bottom: 1px solid white !important;
+	padding: 2px 2px !important;
+	color: #191919 !important;
+}
+#editBookmarkPanelRows > button:hover:not([disabled="true"]), 
+button:hover:not([disabled="true"]) {
+	background-color: #eaeaea !important;
+	box-shadow: inset 0px 2px 2px 0px rgba(77,76,77,0.5) !important;
+	border-radius: 0px !important;
+	border-top: 1px solid white !important;
+	border-bottom: 1px solid white !important;
+	padding: 2px 2px !important;
+	color: #191919 !important;
+}
+
+/*******submenu of bookmarks menu****
+menupopup#placesContext menuitem {
+    color: #191919 !important;
+	background-color: #eaeaea !important;
+}
+menupopup#placesContext menuitem:hover {
+    color: #191919 !important;
+	background-color: #eaeaea !important;
+	box-shadow: inset 0px 2px 2px 0px rgba(77,76,77,0.5) !important;
+}*/
+
+/*************BUTTONS: global***************/
+button {
+	-moz-appearance: none !important;
+    background-color: #f7f7f7 !important;
+	box-shadow: inset 0px 2px 2px 0px rgba(77,76,77,0.5) !important;
+	border-radius: 0px !important;
+	border: 1px solid white !important;
+	padding: 2px 2px !important;
+	color: #191919 !important;
+	
+}
+button:hover:not([disabled="true"]), 
+button:hover:not([disabled="true"]) {
+	background-color: #eaeaea !important;
+	box-shadow: inset 0px 2px 2px 0px rgba(77,76,77,0.5) !important;
+	border-radius: 0px !important;
+	border: 1px solid white !important;
+	padding: 2px 2px !important;
+	color: #191919 !important;
+	
+}
+
+button:active:not([disabled="true"]), 
+button:active:not([disabled="true"]) {
+	background-color: #eaeaea !important;
+	box-shadow: inset 0px 2px 2px 0px rgba(77,76,77,0.5) !important;
+	border-radius: 0px !important;
+	border: 1px solid white !important;
+	padding: 2px 2px !important;
+	color: #191919 !important;
+	
+}
+
+
+/* NOTE  ****************** TABS ********************/
+/* Variables are set inside '.\config\' folders CSS files, if complete package is used! */
+
+:root {
+  --classic_squared_tabs_tab_height: 25px;
+  --classic_squared_tabs_tab_default_loading_icon_color: #0A84FF;
+  --classic_squared_tabs_active_tab: linear-gradient(to top,#f7f7f7,#f7f7f7,#f7f7f7);
+  --classic_squared_tabs_hovered_tabs: linear-gradient(to top,#f7f7f7,#f7f7f7,#f7f7f7);
+  --classic_squared_tabs_other_tabs: linear-gradient(to top,#efefef,#efefef,#efefef);
+  --classic_squared_tabs_unloaded_tabs: linear-gradient(to top,#efefef,#efefef,#efefef);
+  --classic_squared_tabs_lwt-dark_hovered_tabs: linear-gradient(hsla(0,0%,80%,.5), hsla(0,0%,60%,.5) 80%);
+  --classic_squared_tabs_lwt-dark_other_tabs: linear-gradient(hsla(0,0%,60%,.5), hsla(0,0%,45%,.5) 80%);
+  --classic_squared_tabs_lwt-bright_hovered_tabs: linear-gradient(hsla(0,0%,60%,.6), hsla(0,0%,45%,.6) 80%);
+  --classic_squared_tabs_lwt-bright_other_tabs: linear-gradient(hsla(0,0%,40%,.6), hsla(0,0%,30%,.6) 80%);
+  --classic_squared_tabs-border_size: 1px;
+  --classic_squared_tabs-border1: #5f7181;
+  --classic_squared_tabs-border2: rgba(0,0,0,.2);
+  --classic_squared_tabs-border3: rgba(0,0,0,.5);
+  --classic_squared_tabs-border-radius: 0px;
+  --classic_squared_tabs_new_tab_icon_color: black;
+  --classic_squared_tabs_tab_text_color: black;
+  --classic_squared_tabs_tab_text_shadow: transparent;
+  
+  --tab-min-height: var(--classic_squared_tabs_tab_height) !important;
+  --mltabs-newtab-height: calc( var(--classic_squared_tabs_tab_height) + 1px ) !important;
+  --tab-min-height_tnot: calc( var(--classic_squared_tabs_tab_height) - 1px ) !important;
+  --space_below_content: calc( var(--classic_squared_tabs_tab_height) + 1px ) !important;
+  
+  }
+}
+
+
+/* remove default tab colors */
+#TabsToolbar:not(:-moz-lwtheme) .tabbrowser-tab[visuallyselected="true"],
+#TabsToolbar:not(:-moz-lwtheme) .tabbrowser-tab,
+#TabsToolbar:not(:-moz-lwtheme) .tabbrowser-tab .tab-background {
+  background: unset !important;
+  border: unset !important;
+}
+
+/*******************************************/
+/**** default themes tab colors [start] ****/
+/*******************************************/
+
+
+/* tabs toolbar color: default theme */
+#TabsToolbar:not(:-moz-lwtheme) {
+  background-color: #efefef !important;
+}
+
+
+
+/* black tab text color */
+#TabsToolbar:not(:-moz-lwtheme) .tabbrowser-tab {
+  color: #494949 !important;
+  font-size: 11px !important;
+  text-shadow: 1px 1px white !important;
+}
+#TabsToolbar:not(:-moz-lwtheme) .tabbrowser-tab .tab-content[selected="true"] {
+  color: #494949 !important;
+  font-weight: bold !important;
+  text-shadow: 1px 1px white !important;
+}
+
+
+/* default tabs color */
+#TabsToolbar:not(:-moz-lwtheme) .tabs-newtab-button,
+#TabsToolbar:not(:-moz-lwtheme) .tabbrowser-tab .tab-content {
+  background-image: var(--classic_squared_tabs_other_tabs) !important;
+}
+/* selected tabs color */
+#TabsToolbar:not(:-moz-lwtheme) .tabbrowser-tab .tab-content[selected="true"] {
+  background-image: var(--classic_squared_tabs_active_tab) !important;
+}
+/* hovered tabs color */
+#TabsToolbar:not(:-moz-lwtheme) .tabs-newtab-button:hover,
+#TabsToolbar:not(:-moz-lwtheme) .tabbrowser-tab:hover .tab-content:not([selected="true"]) {
+  background-image: var(--classic_squared_tabs_hovered_tabs) !important;
+  text-shadow: 1px 1px white !important;
+}
+
+/* unloaded/pending tabs color */
+#TabsToolbar:not(:-moz-lwtheme) .tabbrowser-tab[pending] .tab-content {
+  background-image: var(--classic_squared_tabs_unloaded_tabs) !important;
+}
+
+/* tab border color */
+
+#TabsToolbar:not(:-moz-lwtheme) .tabbrowser-tab .tab-content {
+  border-top: 1px solid white !important;
+  border-left: 1px solid white !important;
+  border-right: 1px solid white !important;
+  box-shadow: 0px 0px 2px 0px rgba(0,0,0,.5) !important;
+}
+
+#TabsToolbar .tabs-newtab-button {
+  border-top: 0px none var(--classic_squared_tabs-border2) !important;
+  border-left: 0px none var(--classic_squared_tabs-border2) !important;
+  border-right: 0px none var(--classic_squared_tabs-border2) !important;
+}
+
+#TabsToolbar .tabbrowser-tab:not(:-moz-lwtheme):not([selected]) .tab-content {
+  border-top: var(--classic_squared_tabs-border_size) none var(--classic_squared_tabs-border3) !important;
+  border-left: transparent !important;
+  border-right: transparent !important;
+  box-shadow: 0px 0px 1px 0px rgba(0,0,0,.4) !important;
+}
+
+/* new tab icon color */
+#TabsToolbar:not(:-moz-lwtheme) .tabs-newtab-button {
+  fill: #494949 !important;
+  color: #494949 !important;
+}
+#TabsToolbar:not(:-moz-lwtheme) .tabs-newtab-button:hover {
+  fill: var(--classic_squared_tabs_new_tab_icon_color) !important;
+  filter: drop-shadow( 1px 1px 2px rgba(0, 0, 0, .3)) !important; 
+}
+/*******************************************/
+/***** default themes tab colors [end] *****/
+/*******************************************/
+
+
+/* tab line & tab background */
+.tabbrowser-tab:-moz-lwtheme[selected] .tab-line[selected=true] {
+  height: 0px !important;
+}
+
+.tabbrowser-tab > .tab-stack > .tab-background > .tab-line[selected=true],
+.tabbrowser-tab:hover > .tab-stack > .tab-background > .tab-line:not([selected=true]) {
+  background-color: rgba(0,0,0,.2);
+  opacity: 0 !important;
+}
+
+.tabbrowser-tab .tab-background[selected=true] {
+  border-image: unset !important;
+  border-image-slice: 0 !important;
+}
+
+.tabbrowser-tab:not([selected]) .tab-background{
+  display: none !important;
+}
+
+.tabbrowser-tab:hover > .tab-stack > .tab-background:not([selected=true]) {
+  background-color: rgba(0,0,0,.0) !important;
+}
+
+/* tab top border roundness 
+#TabsToolbar .tabs-newtab-button,
+#TabsToolbar .tabbrowser-tab,
+#TabsToolbar .tabbrowser-tab .tab-stack,
+#TabsToolbar .tabbrowser-tab .tab-background,
+#TabsToolbar .tabbrowser-tab .tab-content {
+  border-top-left-radius: 0px !important;
+  border-top-right-radius: 0px !important;
+}
+
+/* loading animation color 
+#TabsToolbar:not(:-moz-lwtheme) .tabbrowser-tab,
+#TabsToolbar:not(:-moz-lwtheme) .tabbrowser-tab:not([visuallyselected=true]) {
+  --tab-loading-fill: var(--classic_squared_tabs_tab_default_loading_icon_color) !important;
+}
+.tab-throbber[busy]::before,
+.tab-throbber[progress]::before {
+  fill: var(--classic_squared_tabs_tab_default_loading_icon_color) !important;
+}
+
+/* space between tabs */
+.tabs-newtab-button,
+.tabbrowser-tab:not([pinned]) {
+  -moz-margin-start: 0px !important;
+}
+
+/* width of new tab tab */
+#TabsToolbar .tabs-newtab-button{
+  min-width: 0px !important; 
+  width: 28px !important;
+  margin-bottom: -1px !important;
+}
+
+/* size of new tab tabs '+' icon */
+#TabsToolbar .tabs-newtab-button .toolbarbutton-icon{
+  min-width: 0px !important;
+  min-height: 0px !important;
+  width: 14px !important;
+  height: 14px !important;
+  margin: 0px !important;
+  margin-bottom: 0px !important;
+  padding: 0px !important;
+  background: unset !important;
+}
+
+/* tab close icon size and position */
+.tabbrowser-tab:not([pinned]) .close-icon > .toolbarbutton-icon {
+  width: 16px !important;
+  height: 16px !important;
+}
+
+.tabbrowser-tab:not([pinned]) .tab-content  .close-icon,
+:root[uidensity=touch] .tabbrowser-tab:not([pinned]) .tab-content .close-icon {
+  width: 16px !important;
+  height: 16px !important;
+  -moz-margin-end: -6px !important;
+}
+
+:root[uidensity=touch] .tabbrowser-tab:not([pinned]) .tab-content  .close-icon,
+:root[uidensity=touch] .tabbrowser-tab:not([pinned]) .close-icon > .toolbarbutton-icon {
+  margin-top: -8px !important;
+  margin-bottom: -8px !important;
+}
+
+:root[uidensity=touch] .tabbrowser-tab:not([pinned]) .tab-close-button {
+  margin-inline-end: unset !important;
+  padding: unset !important;
+}
+
+/*tab throbber position*/
+.tabbrowser-tab:not([pinned]):not([locked]) .tab-throbber,
+.tabbrowser-tab:not([pinned]) .tab-icon-image{
+  -moz-margin-start:-6px !important;
+}
+
+/*tab favicon position*/
+.tabbrowser-tab:not([pinned]) .tab-icon-image{
+  display: none !important;
+}
+
+
+/* reduce minimum tab height */
+#tabbrowser-tabs,
+#tabbrowser-tabs > .tabbrowser-arrowscrollbox,
+.tabbrowser-tabs[positionpinnedtabs] > .tabbrowser-tab[pinned] {
+  min-height: var(--classic_squared_tabs_tab_height) !important;
+}
+
+#TabsToolbar #tabbrowser-tabs[overflow="true"] .tabbrowser-tab[pinned] {
+  min-height: calc( var(--classic_squared_tabs_tab_height) - 1px ) !important;
+  max-height: calc( var(--classic_squared_tabs_tab_height) - 1px ) !important;
+}
+
+/* Windows 10 fix 
+@media (-moz-os-version: windows-win10) {
+	.titlebar-button {
+	  padding-top: 7px !important;
+	  padding-bottom: 7px !important;
+	}
+}*/
+
+/*pinned tabs*/
+#TabsToolbar .tab-content[pinned] {
+  padding: 0 6px !important;
+}
+
+/* remove top line above tabs for lw-themes 
+#main-window:-moz-lwtheme #browser-panel{
+  border: unset !important;
+  box-shadow: unset !important;
+}
+
+/* hide tab separators and borders set by Firefox */
+.tabbrowser-tab::after,
+.tabbrowser-tab::before {
+  opacity: 0 !important;
+  border-image: unset !important;
+  border-image-slice: unset !important;
+  width: unset !important;
+}
+
+#tabbrowser-tabs[movingtab] > .tabbrowser-tab[beforeselected]:not([last-visible-tab])::after,
+.tabbrowser-tab:not([selected]):not([afterselected-visible]):not([afterhovered]):not([first-visible-tab]):not(:hover)::before,
+#tabbrowser-tabs:not([overflow]) > .tabbrowser-tab[last-visible-tab]:not([selected]):not([beforehovered]):not(:hover)::after {
+  content: unset !important;
+  display: unset !important;
+}
+
+.tabbrowser-tab::after,
+.tabbrowser-tab::before {
+  border-left: unset !important;
+  border-image: unset !important;
+  border-image-slice: unset !important;
+  border-top-left-radius: 0px !important;
+  border-top-right-radius: 0px !important;
+}
+
+:root[tabsintitlebar]:not([extradragspace]) #toolbar-menubar[autohide=true] ~ #TabsToolbar > #tabbrowser-tabs > .tabbrowser-tab::after,
+:root[tabsintitlebar]:not([extradragspace]) #toolbar-menubar[autohide=true] ~ #TabsToolbar > #tabbrowser-tabs > .tabbrowser-tab::before,
+.tabbrowser-tab:hover::before,
+.tabbrowser-tab[last-visible-tab]:hover::after,
+#tabbrowser-tabs:not([movingtab]) > .tabbrowser-tab[afterhovered]::before {
+  border-image: unset !important;
+  border-image-slice: unset !important;
+  border-top-left-radius: 0px !important;
+  border-top-right-radius: 0px !important;
+}
+
+.tabbrowser-tab,
+.tab-stack,
+.tab-background {
+  border: unset !important;
+}
+
+/* remove titlebar placerholders */
+#TabsToolbar .titlebar-placeholder[type="pre-tabs"],
+#TabsToolbar .titlebar-placeholder[type="post-tabs"]{
+  opacity: 0 !important;
+}
+
+#TabsToolbar .titlebar-spacer[type="pre-tabs"],
+#TabsToolbar .titlebar-spacer[type="post-tabs"] {
+  display: none !important;
+}
+
+/* make sure toolbar buttons do not increase toolbar height */
+#TabsToolbar toolbarbutton .toolbarbutton-badge-stack,
+#TabsToolbar > toolbarpaletteitem,
+#TabsToolbar > toolbarbutton {
+  min-height: unset !important;
+  padding: unset !important;
+  margin: 0 2px !important;
+}
+
+#TabsToolbar > toolbarpaletteitem .toolbarbutton-icon,
+#TabsToolbar > toolbarbutton .toolbarbutton-icon {
+  min-width: 16px !important;
+  width: unset !important;
+  min-height: 16px !important;
+  height: unset !important;
+  padding: unset !important;
+  margin: unset !important;
+}
+
+#TabsToolbar toolbarbutton .toolbarbutton-badge-stack .toolbarbutton-icon {
+  width: 16px !important;
+  height: 16px !important;
+}
+
+#TabsToolbar-customization-target > toolbarpaletteitem toolbarbutton .toolbarbutton-icon,
+#TabsToolbar-customization-target > toolbarbutton .toolbarbutton-icon {
+  padding: unset !important;
+  height: unset !important;
+  width: unset !important;
+}
+
+/* indicator for multiselected tabs */
+.tabbrowser-tab[multiselected="true"] .tab-stack .tab-content {
+  box-shadow:	inset 2px 0 0 Highlight,
+				inset -2px 0 0 Highlight,
+				inset 0 2px 0 Highlight,
+				inset 0 -2px 0 Highlight !important;
+}
+
+/* remove non-required icon pending */
+.tab-icon-pending {
+  display: none !important;
+}
+
+/*arrow buttons for overflowing tabs*/
+.tabbrowser-arrowscrollbox > .scrollbutton-up:not([disabled="true"]), 
+.tabbrowser-arrowscrollbox > .scrollbutton-down:not([disabled="true"]) {
+	fill: #494949 !important;
+	color: #494949 !important;
+	background-color: #f7f7f7 !important;
+}
+.tabbrowser-arrowscrollbox > .scrollbutton-up:not([disabled="true"]):hover, 
+.tabbrowser-arrowscrollbox > .scrollbutton-down:not([disabled="true"]):hover {
+	fill: black !important;
+	color: black !important;
+	background-color: #f7f7f7 !important;
+}
+.tabbrowser-arrowscrollbox > .scrollbutton-up[disabled="true"] {
+	fill: #494949 !important;
+	color: #494949 !important;
+	border-right: 1px solid rgba(0,0,0,.4) !important;
+}
+.tabbrowser-arrowscrollbox > .scrollbutton-up[disabled="true"]:hover {
+	fill: black !important;
+	color: black !important;
+	border-right: 1px solid rgba(0,0,0,.4) !important;
+}
+.tabbrowser-arrowscrollbox > .scrollbutton-down[disabled="true"] {
+	fill: #494949 !important;
+	color: #494949 !important;
+	border-right: 1px solid rgba(0,0,0,.4) !important;
+}
+.tabbrowser-arrowscrollbox > .scrollbutton-down[disabled="true"]:hover {
+	fill: black !important;
+	color: black !important;
+	border-right: 1px solid rgba(0,0,0,.4) !important;
+}
+/**/
+
+/*******tab throbber************/
+.tab-throbber[busy]::before,
+.tab-throbber[progress]::before {
+  width: 16px !important;
+  height: 16px !important;
+  animation: unset !important;
+  -moz-context-properties: unset !important;
+  fill: unset !important;
+  animation: unset !important;
+  opacity: 0.6 !important;
+  animation: unset !important;
+}
+
+.tab-throbber[busy]::before {
+  background-image: url("./../../image/loading-back3.gif") !important;
+}
+
+.tab-throbber-fallback[busy] {
+  list-style-image: url("./../../image/loading-back3.gif") !important;
+}
+
+.tab-throbber[progress]::before{
+  background-image: url("./../../image/loading-back3.gif") !important;
+}
+
+.tab-throbber-fallback[progress] {
+  list-style-image: url("./../../image/loading-back3.gif") !important;
+}
+
+/**/
+/*****************BUTTONS*********************/
+#nav-bar-overflow-button[open="true"] .toolbarbutton-icon {
+  transform: rotate(90deg) !important;
+}
+
+/*********************FIND BAR****************************/
+findbar {
+	background-color: #f7f7f7 !important;
+	border-top: 2px ridge white !important;
+}
+
+findbar .findbar-button {
+	-moz-appearance: none !important;
+	background-color: #f7f7f7 !important;
+	border-top: 1px solid #f7f7f7 !important;
+	border-bottom: 1px solid #f7f7f7 !important;
+	color: #494949 !important;
+	text-shadow: 1px 1px white !important;
+	
+	padding: 2px 4px !important;
+}	
+
+findbar .findbar-button:hover:not([disabled="true"]),
+findbar .findbar-button[checked="true"]:not([disabled="true"]),
+findbar .findbar-button[open="true"]:not([disabled="true"]) {
+	-moz-appearance: none !important;
+	background-color: #eaeaea !important;
+	box-shadow: inset 0px 2px 2px 0px rgba(77,76,77,0.4) !important;
+	border-radius: 0px !important;
+	border-top: 1px solid #f7f7f7 !important;
+	border-bottom: 1px solid #f7f7f7 !important;
+	color: #191919 !important;
+	text-shadow: 1px 1px white !important;
+	
+	padding: 2px 4px !important;
+}	
+
+
+findbar .findbar-button:active:not([disabled="true"]),
+findbar .findbar-button[checked="true"]:not([disabled="true"]),
+findbar .findbar-button[open="true"]:not([disabled="true"]) {
+	-moz-appearance: none !important;
+	background-color: #e1e0e0 !important;
+	box-shadow: inset 0px 2px 2px 0px rgba(77,76,77,0.4) !important;
+	border-radius: 0px !important;
+	border-top: 1px solid white !important;
+	border-bottom: 1px solid white !important;
+	color: #191919 !important;
+	text-shadow: 1px 1px white !important;
+	
+	padding: 2px 4px !important;
+}	
+
+
+findbar .findbar-textbox {
+	box-shadow: inset 0px 2px 2px 0px rgba(77,76,77,0.6) !important;
+	border-radius: 0px !important;
+	border-top: 1px solid white !important;
+	border-right: none !important;
+	border-bottom: 1px solid white !important;
+	border-left: 1px solid white !important;
+}
+findbar .findbar-find-previous, .findbar-find-next {
+	border-radius: 0px !important;
+	border-top: 1px solid white !important;
+	border-bottom: 1px solid white !important;
+	border-left: none !important;
+	border-right: none !important;
+	box-shadow: inset 0px 2px 2px 0px rgba(77,76,77,0.6) !important;
+	background-color: #f7f7f7 !important;
+}
+.findbar-find-previous:hover:not([disabled="true"]), 
+.findbar-find-next:hover:not([disabled="true"]) {
+	border-radius: 0px !important;
+	border-top: 1px solid white !important;
+	border-bottom: 1px solid white !important;
+	border-left: none !important;
+	border-right: none !important;
+	box-shadow: inset 0px 2px 2px 0px rgba(77,76,77,0.6) !important;
+	background-color: #eaeaea !important;
+}
+
+/*************FINDBAR END***************/
+
+/**************SIDE BAR**************************/
+.sidebar-placesTree, #sidebar-search-container, #sidebar-header {
+	background-color: #f7f7f7 !important;
+}
+
+#sidebar-search-container #search-box:not([focused=true]) {
+	-moz-appearance: none !important;
+	box-shadow: inset 0px 1px 2px 0px rgba(77,76,77,0.7) !important;
+	border-radius: 0px !important;
+	border-top: 1px solid white !important;
+	border-right: none !important;
+	border-bottom: 1px solid white !important;
+	border-left: 1px solid white !important;
+	
+	padding: 4px !important;
+}
+#sidebar-search-container #search-box[focused=true] {
+	-moz-appearance: none !important;
+	box-shadow: inset 0px 2px 2px 0px rgba(77,76,77,0.9) !important;
+	border-radius: 0px !important;
+	border-top: 1px solid white !important;
+	border-right: none !important;
+	border-bottom: 1px solid white !important;
+	border-left: 1px solid white !important;
+	
+	padding: 4px !important;
+}
+
+/*icons in sidebar*/
+#editBMPanel_chooseFolderMenuItem .menu-iconic-icon,
+treechildren::-moz-tree-image(title, container) {
+ list-style-image: url("./../../image/folder.png")!important;
+}
+treechildren::-moz-tree-image(title, container, livemark) {
+ list-style-image: url("./../../image/livemark-folder.png") !important;
+}
+
+#sidebar-switcher-target {
+    -moz-appearance: none !important;
+	color: #494949 !important;
+}
+#sidebar-switcher-target:hover {
+    -moz-appearance: none !important;
+	background-color: #f7f7f7 !important;
+	box-shadow: inset 0px 2px 2px 0px rgba(77,76,77,0.4) !important;
+	border-radius: 0px !important;
+	border-top: 1px solid white !important;
+	border-bottom: 1px solid white !important;
+	padding: 2px 4px !important;
+	color: #494949 !important;
+}
+
+#sidebar-switcher-target.active {
+    -moz-appearance: none !important;
+	background-color: #eaeaea !important;
+	box-shadow: inset 0px 2px 2px 0px rgba(77,76,77,0.4) !important;
+	border-radius: 0px !important;
+	border-top: 1px solid white !important;
+	border-bottom: 1px solid white !important;
+	padding: 2px 4px !important;
+	color: #191919 !important;
+}
+
+#sidebar-switcher-target > #sidebar-icon {
+    list-style-image: url("./../../image/star_button2.png")!important;
+}
+
+/********************places / all bookmarks window****************************/
+#placesToolbar, #placesList, #placesView {
+	background-color: #f7f7f7 !important;
+}
+#placesMenu .menu-iconic {
+	-moz-appearance: none !important;
+	background-color: #f7f7f7 !important;
+	border: 1px solid #f7f7f7 !important;
+	color: #494949 !important;
+	text-shadow: 1px 1px white !important;	
+	padding: 2px 4px !important;
+}	
+
+#placesMenu .menu-iconic:hover:not([disabled="true"]),
+#placesMenu .menu-iconic[checked="true"]:not([disabled="true"]),
+#placesMenu .menu-iconic[open="true"]:not([disabled="true"]) {
+	-moz-appearance: none !important;
+	background-color: #eaeaea !important;
+	box-shadow: inset 0px 2px 2px 0px rgba(77,76,77,0.4) !important;
+	border-radius: 0px !important;
+	border: 1px solid #f7f7f7 !important;
+	color: #191919 !important;
+	text-shadow: 1px 1px white !important;
+	padding: 2px 4px !important;
+	outline: none !important;
+}	
+
+
+#placesMenu .menu-iconic:active:not([disabled="true"]),
+#placesMenu .menu-iconic[checked="true"]:not([disabled="true"]),
+#placesMenu .menu-iconic[open="true"]:not([disabled="true"]) {
+	-moz-appearance: none !important;
+	background-color: #e1e0e0 !important;
+	box-shadow: inset 0px 2px 2px 0px rgba(77,76,77,0.4) !important;
+	border-radius: 0px !important;
+	border: 1px solid #f7f7f7 !important;
+	color: #191919 !important;
+	text-shadow: 1px 1px white !important;
+	padding: 2px 4px !important;
+	outline: none !important;	
+}	
+
+#placeContentColumns treecol {
+	-moz-appearance: none !important; 
+	background-image: linear-gradient(to bottom,#e1e1e1,#ededed,#f4f4f4) !important;
+	border: 1px solid rgba(77,76,77,0.4) !important;
+	padding: 2px !important;
+	margin-left: -1px !important;
+}
+#placeContent {
+	background-color: #f4f4f4 !important;
+}
+
+#placesToolbar textbox:not([focused=true]) {
+	-moz-appearance: none !important;
+	box-shadow: inset 0px 1px 2px 0px rgba(77,76,77,0.7) !important;
+	border-radius: 0px !important;
+	border-top: 1px solid white !important;
+	border-right: none !important;
+	border-bottom: 1px solid white !important;
+	border-left: 1px solid white !important;
+	padding: 4px !important;
+}
+
+#placesToolbar textbox[focused=true] {
+	-moz-appearance: none !important;
+	box-shadow: inset 0px 2px 2px 0px rgba(77,76,77,0.9) !important;
+	border-radius: 0px !important;
+	border-top: 1px solid white !important;
+	border-right: none !important;
+	border-bottom: 1px solid white !important;
+	border-left: 1px solid white !important;
+	padding: 4px !important;
+}
+
+#infoBox textbox:not([focused=true]) {
+	-moz-appearance: none !important;
+	box-shadow: inset 0px 1px 2px 0px rgba(77,76,77,0.7) !important;
+	border-radius: 0px !important;
+	border-top: 1px solid white !important;
+	border-right: none !important;
+	border-bottom: 1px solid white !important;
+	border-left: 1px solid white !important;
+	padding: 4px !important;
+}
+#infoBox textbox[focused=true] {
+	-moz-appearance: none !important;
+	box-shadow: inset 0px 2px 2px 0px rgba(77,76,77,0.9) !important;
+	border-radius: 0px !important;
+	border-top: 1px solid white !important;
+	border-right: none !important;
+	border-bottom: 1px solid white !important;
+	border-left: 1px solid white !important;
+	padding: 4px !important;
+}
+
+#infoBox .expander-up, .expander-down {
+	-moz-appearance: none !important;
+    border-radius: 0px !important;
+	border-top: 1px solid white !important;
+	border-bottom: 1px solid white !important;
+	border-left: none !important;
+	border-right: none !important;
+	box-shadow: inset 0px 2px 2px 0px rgba(77,76,77,0.6) !important;
+	background-color: #f7f7f7 !important;
+	padding: 4px !important;
+}
+#infoBox .expander-up:hover:not([disabled="true"]), 
+.expander-down:hover:not([disabled="true"]) {
+	-moz-appearance: none !important;
+    border-radius: 0px !important;
+	border-top: 1px solid white !important;
+	border-bottom: 1px solid white !important;
+	border-left: none !important;
+	border-right: none !important;
+	box-shadow: inset 0px 2px 2px 0px rgba(77,76,77,0.6) !important;
+	background-color: #eaeaea !important;
+	padding: 4px !important;
+}
+
