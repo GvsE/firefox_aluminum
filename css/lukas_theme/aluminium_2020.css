@@ -627,8 +627,9 @@ button {
 	box-shadow: inset 0px 2px 2px 0px rgba(77,76,77,0.5) !important;
 	border-radius: 0px !important;
 	border: 1px solid white !important;
-	padding: 2px 2px !important;
+	padding: 4px 2px !important;
 	color: #191919 !important;
+	min-height: 26px !important;
 	
 }
 button:hover:not([disabled="true"]), 
@@ -637,9 +638,9 @@ button:hover:not([disabled="true"]) {
 	box-shadow: inset 0px 2px 2px 0px rgba(77,76,77,0.5) !important;
 	border-radius: 0px !important;
 	border: 1px solid white !important;
-	padding: 2px 2px !important;
+	padding: 4px 2px !important;
 	color: #191919 !important;
-	
+	min-height: 26px !important;
 }
 
 button:active:not([disabled="true"]), 
@@ -648,9 +649,48 @@ button:active:not([disabled="true"]) {
 	box-shadow: inset 0px 2px 2px 0px rgba(77,76,77,0.5) !important;
 	border-radius: 0px !important;
 	border: 1px solid white !important;
-	padding: 2px 2px !important;
+	padding: 4px 2px !important;
 	color: #191919 !important;
-	
+	min-height: 26px !important;
+}
+
+/**buttons with ticks**/
+.checkbox-check:not([checked="true"]) {
+	-moz-appearance: none !important;
+    min-width: 14px !important;
+    min-height: 14px !important;
+    border: 1px solid white !important;
+	background-color: #f7f7f7 !important;
+	box-shadow: inset 0px 2px 2px 0px rgba(77,76,77,0.5) !important;	
+}
+.checkbox-check:not([checked="true"]) {
+	-moz-appearance: none !important;
+    min-width: 14px !important;
+    min-height: 14px !important;
+    border: 1px solid white !important;
+	background-color: #eaeaea !important;
+	box-shadow: inset 0px 2px 2px 0px rgba(77,76,77,0.6) !important;	
+}
+
+.checkbox-check[checked="true"] {
+	-moz-appearance: none !important;
+	background-image: url("../../image/menu-check.png") !important;
+	background-size: cover !important;
+    min-width: 14px !important;
+    min-height: 14px !important;
+    border: 1px solid white !important;
+	background-color: #f7f7f7 !important;
+	box-shadow: inset 0px 2px 2px 0px rgba(77,76,77,0.5) !important;
+}
+.checkbox-check[checked="true"] {
+	-moz-appearance: none !important;
+	background-image: url("../../image/menu-check.png") !important;
+	background-size: cover !important;
+    min-width: 14px !important;
+    min-height: 14px !important;
+    border: 1px solid white !important;
+	background-color: #eaeaea !important;
+	box-shadow: inset 0px 2px 2px 0px rgba(77,76,77,0.6) !important;
 }
 
 
