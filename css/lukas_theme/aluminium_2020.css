@@ -229,6 +229,35 @@
 
 
 /************ menus *************/
+/*background except for the bookmarks dropdown menu*/
+menupopup:not(#BMB_bookmarksPopup) {
+	-moz-appearance: none !important;
+    border: 1px solid ThreeDDarkShadow !important;
+    padding: 0px !important;
+    min-width: 1px !important;
+    background: Menu !important;
+    color: MenuText !important;
+}
+/**/
+
+/*buttons on bright drop menus with arrows*/
+panelview toolbarbutton:not(:hover) {
+	color: #191919 !important;
+}
+panelview toolbarbutton:hover {
+	-moz-appearance: none !important;
+	color: #191919 !important;
+	background-color: #f1f1f1 !important;
+	box-shadow: inset 0px 2px 2px 0px rgba(77,76,77,0.5) !important;
+}
+panelview toolbarbutton:active {
+	-moz-appearance: none !important;
+	color: #191919 !important;
+	background-color: #eaeaea !important;
+	box-shadow: inset 0px 2px 2px 0px rgba(77,76,77,0.6) !important;
+}
+/**/
+
 
 menuitem:not(.openintabs-menuitem):not(.bookmark-item):not(.menuitem-iconic):not([open="true"]):not([checked="true"]):not([disabled="true"]):not(:active):not(:hover) {
 	-moz-appearance: none !important;
@@ -458,7 +487,7 @@ menuitem.bookmark-item:not([open="true"]):not([checked="true"]):not([disabled="t
 }
 
 
-/*arrow at the top of drop-down menus*/
+/*arrow at the top of drop-down menus and menus with this arrow*/
 .panel-arrow {
     -moz-context-properties: fill, stroke !important;
     fill: #fbfbfb !important;
@@ -471,6 +500,7 @@ menuitem.bookmark-item:not([open="true"]):not([checked="true"]):not([disabled="t
     border: 1px solid var(--arrowpanel-border-color) !important;
     box-shadow: 0 0 4px hsla(0,0%,0%,.2) !important;
     margin: 4px !important;
+	padding: 2px 2px !important;
 }
 
 
