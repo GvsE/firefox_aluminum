@@ -458,7 +458,20 @@ menuitem.bookmark-item:not([open="true"]):not([checked="true"]):not([disabled="t
 }
 
 
-
+/*arrow at the top of drop-down menus*/
+.panel-arrow {
+    -moz-context-properties: fill, stroke !important;
+    fill: #fbfbfb !important;
+    stroke: var(--arrowpanel-border-color) !important;
+}
+.panel-arrowcontent {    
+    color: var(--arrowpanel-color) !important;
+    background-image: linear-gradient(to top,#f7f7f7,#fbfbfb) !important;
+    background-clip: padding-box !important;
+    border: 1px solid var(--arrowpanel-border-color) !important;
+    box-shadow: 0 0 4px hsla(0,0%,0%,.2) !important;
+    margin: 4px !important;
+}
 
 
 /*****arrow on top of and below overflowing popoup menu and bookmarks menu*******/
