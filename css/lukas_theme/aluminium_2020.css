@@ -116,10 +116,10 @@
 	font-size: 12px !important;
 }
 /****url bar icons****/
-#urlbar #star-button {
+#urlbar #star-button:not([starred="true"]) {
     list-style-image: url("./../../image/star_button1.png") !important;
 }
-#urlbar #star-button[starred] {
+#urlbar #star-button[starred="true"] {
     list-style-image: url("./../../image/star_button2.png") !important;
 }
 #urlbar #identity-icon {
@@ -234,8 +234,7 @@ menuitem:not(.openintabs-menuitem):not(.bookmark-item):not(.menuitem-iconic):not
 	-moz-appearance: none !important;
 	color: #191919 !important;
 	background-color: #f7f7f7 !important;
-	padding: 4px 0px !important;
-	
+	padding: 4px 0px !important;	
 	font-size: 11px !important;
 	text-shadow: 1px 1px white !important;
 }	
@@ -244,8 +243,7 @@ menuitem:not(.openintabs-menuitem):not(.bookmark-item):not(.menuitem-iconic):not
 	color: #191919 !important;
 	background-color: #eaeaea !important;
 	box-shadow: inset 0px 2px 2px 0px rgba(77,76,77,0.5) !important;
-	padding: 4px 0px !important;
-	
+	padding: 4px 0px !important;	
 	font-size: 11px !important;
 	text-shadow: 1px 1px white !important;
 }
@@ -256,6 +254,7 @@ menuitem:not(.openintabs-menuitem):not(.bookmark-item):not(.menuitem-iconic):not
 }
 
 /*takes care of menu items like "sync/send page to device"*/
+/*old version
 menu[_moz-menuactive="true"]:link {
 	-moz-appearance: none !important;
 	height: 22px !important;
@@ -281,7 +280,51 @@ menu[_moz-menuactive="true"]:active {
     background-color: rgb(230, 230, 230) !important;
     height: 22px !important;
     box-shadow: inset 0px 2px 2px 0px rgba(77,76,77,0.4) !important;
+}*/
+
+/*new version*/
+menu.sync-ui-item {
+	-moz-appearance: none !important;
+	padding: 4px 0px !important;
+	font-size: 11px !important;
+	text-shadow: 1px 1px white !important;
+	background-color: #f7f7f7 !important;
 }
+menu.sync-ui-item:link {
+	-moz-appearance: none !important;
+	padding: 4px 0px !important;	
+	font-size: 11px !important;
+	text-shadow: 1px 1px white !important;
+	background-color: #f7f7f7 !important;
+}
+
+menu.sync-ui-item:visited {
+	-moz-appearance: none !important;
+	padding: 4px 0px !important;	
+	font-size: 11px !important;
+	text-shadow: 1px 1px white !important;
+	background-color: #f7f7f7 !important;
+}
+
+menu.sync-ui-item:hover {
+  -moz-appearance: none !important;
+    background-color: rgb(230, 230, 230) !important;
+    padding: 4px 0px !important;	
+	font-size: 11px !important;
+	text-shadow: 1px 1px white !important;
+    box-shadow: inset 0px 2px 2px 0px rgba(77,76,77,0.4) !important;
+    outline: 1px solid white;
+}
+
+menu.sync-ui-item:active {
+  -moz-appearance: none !important;
+    background-color: rgb(230, 230, 230) !important;
+    padding: 4px 0px !important;	
+	font-size: 11px !important;
+	text-shadow: 1px 1px white !important;
+    box-shadow: inset 0px 2px 2px 0px rgba(77,76,77,0.4) !important;
+}
+
 
 /******menu items with checkboxes ******/
 menuitem[type="checkbox"]:not(.openintabs-menuitem):not(.bookmark-item):not([open="true"]):not([disabled="true"]):not(:active):not(:hover) {
