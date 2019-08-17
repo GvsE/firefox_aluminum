@@ -230,7 +230,8 @@
 
 /************ menus *************/
 /*background except for the bookmarks dropdown menu*/
-menupopup:not(#BMB_bookmarksPopup) {
+menupopup:not(#BMB_bookmarksPopup), 
+:not(#BMB_bookmarksPopup menupopup[placespopup="true"]) {
 	-moz-appearance: none !important;
     border: 1px solid ThreeDDarkShadow !important;
     padding: 0px !important;
@@ -258,6 +259,41 @@ panelview toolbarbutton:active {
 }
 /**/
 
+/*highlighted button on bookmarking arrow-menu*/
+#customization-done-button, .editBookmarkPanelBottomButton:not(#editBookmarkPanelDoneButton) {
+    flex: 1 !important;
+	background-color: #9f9f9f !important;
+	color: white !important;
+	text-shadow: 1px 1px gray !important;
+}
+#customization-done-button:hover, .editBookmarkPanelBottomButton:not(#editBookmarkPanelDoneButton):hover {
+    flex: 1 !important;
+	background-color: gray !important;
+	color: white !important;
+	text-shadow: 1px 1px black !important;
+}
+
+/**/
+
+/*footer button of arrow menu*/
+menuitem.panel-subview-footer:not(:-moz-any([disabled], :active))[_moz-menuactive], .subviewbutton.panel-subview-footer:not(:-moz-any([disabled], [open], :active)):not(:-moz-any(:hover, :focus)) {
+    -moz-appearance: none !important;
+	color: #191919 !important;
+	background-color: #f7f7f7 !important;	
+	text-shadow: 1px 1px white !important;
+	min-height: 30px !important;
+	border-top: 1px solid #e4e4e4 !important;
+}
+menuitem.panel-subview-footer:not(:-moz-any([disabled], :active))[_moz-menuactive], .subviewbutton.panel-subview-footer:not(:-moz-any([disabled], [open], :active)):-moz-any(:hover, :focus) {
+    -moz-appearance: none !important;
+	color: #191919 !important;
+	background-color: #f1f1f1 !important;
+	box-shadow: inset 0px 2px 2px 0px rgba(77,76,77,0.5) !important;
+	text-shadow: 1px 1px white !important;
+	min-height: 30px !important;
+	border-top: 1px solid white !important;
+}
+/**/
 
 menuitem:not(.openintabs-menuitem):not(.bookmark-item):not(.menuitem-iconic):not([open="true"]):not([checked="true"]):not([disabled="true"]):not(:active):not(:hover) {
 	-moz-appearance: none !important;
@@ -741,24 +777,25 @@ button:active:not([disabled="true"]) {
 }
 
 /**buttons with ticks**/
-.checkbox-check:not([checked="true"]) {
+checkbox:not(:hover) > .checkbox-check:not([checked="true"]) {
 	-moz-appearance: none !important;
     min-width: 14px !important;
     min-height: 14px !important;
     border: 1px solid white !important;
 	background-color: #f7f7f7 !important;
-	box-shadow: inset 0px 2px 2px 0px rgba(77,76,77,0.5) !important;	
+	box-shadow: inset 0px 2px 2px 0px rgba(77,76,77,0.5) !important;
 }
-.checkbox-check:not([checked="true"]) {
+checkbox:hover > .checkbox-check:not([checked="true"]) {
 	-moz-appearance: none !important;
     min-width: 14px !important;
     min-height: 14px !important;
     border: 1px solid white !important;
 	background-color: #eaeaea !important;
-	box-shadow: inset 0px 2px 2px 0px rgba(77,76,77,0.6) !important;	
+	box-shadow: inset 0px 2px 2px 0px rgba(77,76,77,0.6) !important;
 }
 
-.checkbox-check[checked="true"] {
+
+checkbox:not(:hover) > .checkbox-check[checked="true"] {
 	-moz-appearance: none !important;
 	background-image: url("../../image/menu-check.png") !important;
 	background-size: cover !important;
@@ -768,7 +805,7 @@ button:active:not([disabled="true"]) {
 	background-color: #f7f7f7 !important;
 	box-shadow: inset 0px 2px 2px 0px rgba(77,76,77,0.5) !important;
 }
-.checkbox-check[checked="true"] {
+checkbox:hover > .checkbox-check[checked="true"] {
 	-moz-appearance: none !important;
 	background-image: url("../../image/menu-check.png") !important;
 	background-size: cover !important;
@@ -778,6 +815,7 @@ button:active:not([disabled="true"]) {
 	background-color: #eaeaea !important;
 	box-shadow: inset 0px 2px 2px 0px rgba(77,76,77,0.6) !important;
 }
+/**/
 
 
 /* NOTE  ****************** TABS ********************/
