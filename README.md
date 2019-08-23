@@ -14,4 +14,4 @@ inspired by the original Aluminium theme by Gerrit Vanoppen
 highlighted button
 0.53 (23.08.19)
 7. hamburger and developer icons fixed
-8. items in drop down menus on back/forwd buttons of the navbar
+8. items on drop down menus on back/forwd buttons of the navbar
