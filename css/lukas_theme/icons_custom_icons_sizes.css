@@ -188,7 +188,10 @@ toolbar:not(#nav-bar) :-moz-any(#panic-button,#pocket-button):not([open]) .toolb
   -moz-image-region: rect(18px, 468px, 36px, 450px) !important;
 }
 #PanelUI-menu-button {
-  -moz-image-region: rect(1px, 485px, 17px, 469px) !important;
+  -moz-image-region: rect(0px, 485px, 18px, 469px) !important;
+}
+#PanelUI-menu-button:hover {
+  -moz-image-region: rect(18px, 485px, 36px, 469px) !important;
 }
 
 #cut-button {
