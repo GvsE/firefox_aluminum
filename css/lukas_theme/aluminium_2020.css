@@ -451,6 +451,55 @@ menuitem[type="checkbox"][checked="true"] > .menu-iconic-left {
 }
 /******menu items with checkboxes END******/
 
+/******menu items with radio boxes ******/
+menuitem[type="radio"]:not([open="true"]):not([disabled="true"]):not(:active):not(:hover) {
+	-moz-appearance: none !important;
+	color: #191919 !important;
+	background-color: #f7f7f7 !important;	
+	font-weight: bold !important;
+	font-size: 11px !important;
+	text-shadow: 1px 1px white !important;
+	padding: 4px !important;
+}	
+menuitem[type="radio"]:not([open="true"]):not([disabled="true"]):hover {
+	-moz-appearance: none !important;
+	color: #191919 !important;
+	background-color: #eaeaea !important;
+	box-shadow: inset 0px 2px 2px 0px rgba(77,76,77,0.5) !important;	
+	font-weight: bold !important;
+	font-size: 11px !important;
+	text-shadow: 1px 1px white !important;
+	padding: 4px !important;
+}
+menuitem[type="radio"][checked="false"]:not([open="true"]):not([disabled="true"]):not(:active):not(:hover) {
+	-moz-appearance: none !important;
+	color: #191919 !important;
+	background-color: #f7f7f7 !important;	
+	font-weight: bold !important;
+	font-size: 11px !important;
+	text-shadow: 1px 1px white !important;
+	padding: 4px !important;
+}	
+menuitem[type="radio"][checked="false"]:not([open="true"]):not([disabled="true"]):hover {
+	-moz-appearance: none !important;
+	color: #191919 !important;
+	background-color: #eaeaea !important;
+	box-shadow: inset 0px 2px 2px 0px rgba(77,76,77,0.5) !important;	
+	font-weight: bold !important;
+	font-size: 11px !important;
+	text-shadow: 1px 1px white !important;
+	padding: 4px !important;
+}
+menuitem[type="radio"][checked="true"] .menu-iconic-left {
+	-moz-appearance: none !important;
+	background-color: transparent !important;
+	background-image: url("../../image/globe.png") !important;
+	width: 16px !important;
+	height: 16px !important;
+	padding: 2px !important;
+}
+/******menu items with radio boxes END******/
+
 /*****menu items with icons on the left****/
 menuitem.menuitem-iconic {
 	-moz-appearance: none !important;
@@ -1509,3 +1558,18 @@ treechildren::-moz-tree-image(title, container, livemark) {
 	padding: 4px !important;
 }
 
+treechildren {
+	-moz-appearance: none !important;
+    background-color: #f4f4f4 !important;
+	border-top: 1px solid rgba(77,76,77,0.4) !important;
+}
+.sidebar-placesTreechildren::-moz-tree-cell(hover),
+.sidebar-placesTreechildren::-moz-tree-row(selected) {
+	background-color: #b4b4b4 !important;
+}
+   
+/* Fix for remaining hovering borders */
+.sidebar-placesTreechildren::-moz-tree-row {
+ outline: none !important;
+ border: none !important;
+}

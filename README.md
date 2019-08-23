@@ -12,3 +12,6 @@ inspired by the original Aluminium theme by Gerrit Vanoppen
 5. white arrow menus' footer button
 6. checkboxes
 highlighted button
+0.53 (23.08.19)
+7. hamburger and developer icons fixed
+8. items on drop down menus on back/forwd buttons of the navbar
