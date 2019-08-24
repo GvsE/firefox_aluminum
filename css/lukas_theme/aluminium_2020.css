@@ -45,6 +45,14 @@
 	background-color: #efefef !important;
 	color: #494949 !important;	
 }
+#main-menubar > menu:hover,
+#main-menubar > menu:active,
+#main-menubar > menu:focus {
+    -moz-appearance: none !important;
+    color: inherit !important;
+	background-color: #eaeaea !important;
+	box-shadow: inset 0px 2px 4px 0px rgba(77,76,77,0.5) !important;
+}
 
 
 /*************** navigation bar****************/
@@ -673,6 +681,25 @@ menupopup .menuitem-iconic:hover {
 	font-weight: bold !important;
 	text-shadow: 1px 1px white !important;
 }
+
+/**items, e.g. bookmarks, on menus of the menu bar**/
+menupopup > menu {
+	-moz-appearance: none !important;
+	background-color: inherit !important;	
+	text-shadow: 1px 1px white !important;
+	height: 22px !important;
+	border-bottom: 1px solid #f7f7f7 !important;
+}
+menupopup > menu:hover {
+	-moz-appearance: none !important;	
+	text-shadow: 1px 1px white !important;
+	background-color: #eaeaea !important;
+	box-shadow: inset 0px 2px 2px 0px rgba(77,76,77,0.5) !important;
+	border-bottom: 1px solid white !important;
+	height: 22px !important;
+}
+/**/
+
 /*********textboxes in menus***********/
 
 menulist {
