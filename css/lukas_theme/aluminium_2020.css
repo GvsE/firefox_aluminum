@@ -100,8 +100,8 @@
 
 /************* url bar / address bar and search bar ****************/
 
-#urlbar:not([focused=true]), 
-#searchbar > .searchbar-textbox:not([focused=true]) {
+#urlbar:not([focused=true]), #searchbar:not([focused=true]) {
+/*#searchbar > .searchbar-textbox:not([focused=true]) obsolete in FF69*/ 
 	min-height: 28px !important;
 	border-top: 1px solid white !important;
 	border-bottom: 1px solid white !important;
@@ -113,7 +113,7 @@
 }
 
 #urlbar[focused=true], 
-#searchbar > .searchbar-textbox[focused=true] {
+#searchbar[focused=true] {
 	min-height: 28px !important;
 	border-top: 1px solid white !important;
 	border-bottom: 1px solid white !important;
@@ -581,12 +581,12 @@ menuitem.bookmark-item:not([open="true"]):not([checked="true"]):not([disabled="t
 
 
 /*arrow at the top of drop-down menus and menus with this arrow*/
-.panel-arrow {
+.panel-arrow:not(#confirmation-hint) {
     -moz-context-properties: fill, stroke !important;
     fill: #fbfbfb !important;
     stroke: var(--arrowpanel-border-color) !important;
 }
-.panel-arrowcontent {    
+.panel-arrowcontent:not(#confirmation-hint) {    
     color: var(--arrowpanel-color) !important;
     background-image: linear-gradient(to top,#f7f7f7,#fbfbfb) !important;
     background-clip: padding-box !important;
@@ -1600,3 +1600,11 @@ treechildren {
  outline: none !important;
  border: none !important;
 }
+
+/*blue balloon with "saved to bookmarks" dialogue*/
+#confirmation-hint {
+	--arrowpanel-background: #eaeaea !important;
+	--arrowpanel-border-color: #eaeaea !important;
+	--arrowpanel-color: black !important;
+}
+
