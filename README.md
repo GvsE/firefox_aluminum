@@ -16,3 +16,5 @@ highlighted button
 7. hamburger and developer icons fixed
 8. items on drop down menus on back/forwd buttons of the navbar
 9. menu bar button fixes
+07.09.2019
+10. searchbar fix and "saved to bookmarked" balloon fix for FF69
