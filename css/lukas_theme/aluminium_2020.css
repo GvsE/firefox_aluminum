@@ -960,7 +960,7 @@ checkbox:hover > .checkbox-check[checked="true"] {
 
 
 /* default tabs color */
-#TabsToolbar:not(:-moz-lwtheme) .tabs-newtab-button,
+#TabsToolbar:not(:-moz-lwtheme) #tabs-newtab-button,
 #TabsToolbar:not(:-moz-lwtheme) .tabbrowser-tab .tab-content {
   background-image: var(--classic_squared_tabs_other_tabs) !important;
 }
@@ -969,7 +969,7 @@ checkbox:hover > .checkbox-check[checked="true"] {
   background-image: var(--classic_squared_tabs_active_tab) !important;
 }
 /* hovered tabs color */
-#TabsToolbar:not(:-moz-lwtheme) .tabs-newtab-button:hover,
+#TabsToolbar:not(:-moz-lwtheme) #tabs-newtab-button:hover,
 #TabsToolbar:not(:-moz-lwtheme) .tabbrowser-tab:hover .tab-content:not([selected="true"]) {
   background-image: var(--classic_squared_tabs_hovered_tabs) !important;
   text-shadow: 1px 1px white !important;
@@ -989,7 +989,7 @@ checkbox:hover > .checkbox-check[checked="true"] {
   box-shadow: 0px 0px 2px 0px rgba(0,0,0,.5) !important;
 }
 
-#TabsToolbar .tabs-newtab-button {
+#TabsToolbar #tabs-newtab-button {
   border-top: 0px none var(--classic_squared_tabs-border2) !important;
   border-left: 0px none var(--classic_squared_tabs-border2) !important;
   border-right: 0px none var(--classic_squared_tabs-border2) !important;
@@ -1003,11 +1003,11 @@ checkbox:hover > .checkbox-check[checked="true"] {
 }
 
 /* new tab icon color */
-#TabsToolbar:not(:-moz-lwtheme) .tabs-newtab-button {
+#TabsToolbar:not(:-moz-lwtheme) #tabs-newtab-button {
   fill: #494949 !important;
   color: #494949 !important;
 }
-#TabsToolbar:not(:-moz-lwtheme) .tabs-newtab-button:hover {
+#TabsToolbar:not(:-moz-lwtheme) #tabs-newtab-button:hover {
   fill: var(--classic_squared_tabs_new_tab_icon_color) !important;
   filter: drop-shadow( 1px 1px 2px rgba(0, 0, 0, .3)) !important; 
 }
@@ -1061,20 +1061,20 @@ checkbox:hover > .checkbox-check[checked="true"] {
 }
 
 /* space between tabs */
-.tabs-newtab-button,
-.tabbrowser-tab:not([pinned]) {
+#tabs-newtab-button,
+#tabbrowser-tab:not([pinned]) {
   -moz-margin-start: 0px !important;
 }
 
 /* width of new tab tab */
-#TabsToolbar .tabs-newtab-button{
+#TabsToolbar #tabs-newtab-button{
   min-width: 0px !important; 
   width: 28px !important;
   margin-bottom: -1px !important;
 }
 
 /* size of new tab tabs '+' icon */
-#TabsToolbar .tabs-newtab-button .toolbarbutton-icon{
+#TabsToolbar #tabs-newtab-button .toolbarbutton-icon{
   min-width: 0px !important;
   min-height: 0px !important;
   width: 14px !important;
@@ -1608,3 +1608,7 @@ treechildren {
 	--arrowpanel-color: black !important;
 }
 
+#downloads-button[attention="success"] > .toolbarbutton-badge-stack > #downloads-indicator-anchor > #downloads-indicator-icon,
+#downloads-button[attention="success"] > .toolbarbutton-badge-stack > #downloads-indicator-anchor > #downloads-indicator-progress-outer {
+	fill: green !important;
+}
