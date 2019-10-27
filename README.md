@@ -18,3 +18,5 @@ highlighted button
 9. menu bar button fixes
 07.09.2019
 10. searchbar fix and "saved to bookmarked" balloon fix for FF69
+FF70
+new tab button fixed
